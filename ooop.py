@@ -448,10 +448,11 @@ class Data(object):
             self.get_values()
         else:
             # get default values
-            default_values = {}
-            field_names = self.fields.keys()
-            default_values = self._manager.default_get(field_names)
-            self.init_values(**default_values)
+            #default_values = {}
+            #field_names = self.fields.keys()
+            #default_values = self._manager.default_get(field_names)
+            #self.init_values(**default_values)
+            self.init_values(*args,**kargs)
 
     def init_values(self, *args, **kargs):
         """ initial values for object """
