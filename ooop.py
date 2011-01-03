@@ -464,7 +464,8 @@ class Data(object):
                     self.__dict__[name] = List(self._manager, kargs[name], data=self, model=relation)
                 else:
                     self.__dict__[name] = List(self._manager, data=self, model=relation)
-            elif ttype == 'many2one':
+	    elif False:
+            #elif ttype == 'many2one':
                 if name in keys:
                     # manager, ref=None, model=None, copy=False
                     instance = Data(self._manager, kargs[name], relation)
